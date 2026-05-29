@@ -84,7 +84,7 @@ export default function DashboardPage() {
     if (!form.date) e.date = '점검일을 선택하세요';
     if (Object.keys(e).length > 0) { setErrors(e); return; }
     setSubmitting(true);
-    const { error } = await supabase.from('inspection_reports').insert([{
+    const { error } = await supabase.from('kdn02_inspection_reports').insert([{
       equipment_id: form.equipmentId || '-',
       equipment_name: form.equipmentName,
       type: form.type,

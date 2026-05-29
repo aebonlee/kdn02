@@ -59,7 +59,7 @@ export default function ReportsPage() {
   const fetchReports = async () => {
     setLoading(true);
     const { data, error } = await supabase
-      .from('inspection_reports')
+      .from('kdn02_inspection_reports')
       .select('*')
       .order('created_at', { ascending: false });
 
@@ -86,7 +86,7 @@ export default function ReportsPage() {
     setSubmitting(true);
 
     const { data, error } = await supabase
-      .from('inspection_reports')
+      .from('kdn02_inspection_reports')
       .insert([{
         equipment_id: form.equipmentId || '-',
         equipment_name: form.equipmentName,
@@ -112,7 +112,7 @@ export default function ReportsPage() {
   // 삭제
   const handleDelete = async () => {
     const { error } = await supabase
-      .from('inspection_reports')
+      .from('kdn02_inspection_reports')
       .delete()
       .eq('id', deleteId);
 
