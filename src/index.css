@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0e17;
+  min-height: 100vh;
+  color: #f4f5f9;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
